@@ -1,0 +1,11 @@
+ja:
+  rooms:
+    price: "家賃"
+    deposit: "デポジット"
+    internet: "インターネット"
+    furnished: "家具"
+    smoking: "喫煙"
+    gender: "性別"
+    closest_station: "最寄駅"
+    zone: "ゾーン"
+    description: "概要"

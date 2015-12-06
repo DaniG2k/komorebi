@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
-  devise_for :users
-  resources :rooms
+  get '' => redirect("/#{I18n.default_locale}")
+  scope "/:locale", locale: /#{I18n.available_locales.join("|")}/ do
+    devise_for :users
+    root 'rooms#index'
+    resources :rooms
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-
-  # You can have the root of your site routed with "root"
-  root 'rooms#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

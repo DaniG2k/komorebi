@@ -1,0 +1,11 @@
+en:
+  rooms:
+    price: "Price"
+    deposit: "Deposit"
+    internet: "Internet"
+    furnished: "Furnished"
+    smoking: "Smoking"
+    gender: "Gender"
+    closest_station: "Closest station"
+    zone: "Zone"
+    description: "Description"
