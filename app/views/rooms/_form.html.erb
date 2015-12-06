@@ -37,7 +37,7 @@
   </div>
   <div class="field">
     <%= f.label(t(:closest_station, scope: :rooms)) %><br>
-    <%= f.text_field :closest_station %>
+    <%= f.select(:closest_station, options_for_select(station_names.each_with_index.map {|s,i| [s,i]}, 0)) %>
   </div>
   <div class="field">
     <%= f.label(t(:zone, scope: :rooms)) %><br>
