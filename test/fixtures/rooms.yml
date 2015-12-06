@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  price: 1.5
+  deposit: 1.5
+  internet: false
+  furnished: false
+  smoking: false
+  gender: MyString
+  closest_station: MyString
+  zone: 1
+  description: MyText
+
+two:
+  price: 1.5
+  deposit: 1.5
+  internet: false
+  furnished: false
+  smoking: false
+  gender: MyString
+  closest_station: MyString
+  zone: 1
+  description: MyText
