@@ -7,10 +7,8 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= select('locale', 'id', %w(English 日本語 한국어), :onchange => "this.form.submit()") %>
-
-<%= yield %>
 <%= render 'common/authentication' %>
+<%= select('locale', 'id', %w(English 日本語 한국어), :onchange => "this.form.submit()") %>
+<%= yield %>
 </body>
 </html>
