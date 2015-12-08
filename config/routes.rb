@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get '' => redirect("/#{I18n.default_locale}")
-  scope "/:locale", locale: /#{I18n.available_locales.join("|")}/ do
+  scope "/:locale", locale: /en|ja|ko/ do # Can also do: /#{I18n.available_locales.join("|")}/ do
     devise_for :users
     root 'rooms#index'
     resources :rooms
