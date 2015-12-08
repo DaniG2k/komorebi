@@ -1,6 +1,7 @@
 class RoomsController < ApplicationController
   before_action :set_room, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: :index
+  before_action :authorize, only: [:edit, :destroy]
   # GET /rooms
   # GET /rooms.json
   def index
@@ -55,7 +56,6 @@ class RoomsController < ApplicationController
   # DELETE /rooms/1
   # DELETE /rooms/1.json
   def destroy
-    authorize @room, :destroy?
     @room.destroy
     respond_to do |format|
       format.html { redirect_to rooms_url, notice: 'Room was successfully destroyed.' }
@@ -75,5 +75,11 @@ class RoomsController < ApplicationController
         :price, :deposit, :internet, :furnished,
         :smoking, :gender, :closest_station, :zone,
         :description)
+    end
+
+    def authorize
+      unless Room.administrators.include?(current_user.id) || current_user == @room.user
+        redirect_to root_path, notice: "Sorry, seems you can't #{action_name} that room!"
+      end
     end
 end

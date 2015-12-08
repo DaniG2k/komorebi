@@ -7,4 +7,9 @@ class Room < ActiveRecord::Base
 	validates :zone, inclusion: { in: (1..6) }
 	validates :gender, inclusion: { in: %w(none female male) }
 	validates_length_of :description, :maximum => 1000, :allow_blank => true
+
+  def self.administrators
+    # Array of administrator ids.
+    []
+  end
 end
