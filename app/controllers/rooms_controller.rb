@@ -25,6 +25,7 @@ class RoomsController < ApplicationController
   # POST /rooms.json
   def create
     @room = Room.new(room_params)
+    @room.user_id = current_user.id
 
     respond_to do |format|
       if @room.save
@@ -70,6 +71,9 @@ class RoomsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def room_params
-      params.require(:room).permit(:price, :deposit, :internet, :furnished, :smoking, :gender, :closest_station, :zone, :description)
+      params.require(:room).permit(
+        :price, :deposit, :internet, :furnished,
+        :smoking, :gender, :closest_station, :zone,
+        :description)
     end
 end

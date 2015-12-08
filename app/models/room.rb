@@ -1,7 +1,7 @@
 class Room < ActiveRecord::Base
 	belongs_to :user
 	
-	validates_presence_of :price
+	validates_presence_of :price, :user_id
   # There are 640 station names. Check station_names method in the rooms helper.
 	#validates :closest_station, inclusion: { in: (0..639) }
 	validates :zone, inclusion: { in: (1..6) }
