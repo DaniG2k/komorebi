@@ -79,7 +79,7 @@ class RoomsController < ApplicationController
 
     def authorize
       unless Room.administrators.include?(current_user.id) || current_user == @room.user
-        redirect_to root_path, notice: "Sorry, seems you can't #{action_name} that room!"
+        redirect_to root_path, notice: t(:cannot_modify, scope: :rooms)
       end
     end
 end
