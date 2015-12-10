@@ -8,6 +8,10 @@ class RoomsController < ApplicationController
     @rooms = Room.all
   end
 
+  def my_rooms
+    @rooms = Room.where(user_id: current_user.id)
+  end
+
   # GET /rooms/1
   # GET /rooms/1.json
   def show
@@ -79,7 +83,7 @@ class RoomsController < ApplicationController
 
     def authorize
       unless Room.administrators.include?(current_user.id) || current_user == @room.user
-        redirect_to root_path, notice: t(:cannot_modify, scope: :rooms)
+        redirect_to(root_path, notice: t(:cannot_modify, scope: :rooms))
       end
     end
 end

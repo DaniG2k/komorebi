@@ -4,6 +4,12 @@ Rails.application.routes.draw do
     devise_for :users
     root 'rooms#index'
     resources :rooms
+    get 'my_rooms', to: 'rooms#my_rooms'
+
+    # mailbox folder routes
+    %w(inbox sent trash).each do |location|
+      get "mailbox/#{location}" => "mailbox#{location}", as: "mailbox_#{location}".to_sym
+    end
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

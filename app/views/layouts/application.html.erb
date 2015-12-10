@@ -10,6 +10,9 @@
 <body>
   <%= render 'common/language_select' %>
   <%= render 'common/authentication' %>
+  <%= link_to t(:listing_rooms, scope: :rooms), rooms_path %>
+  <%= render 'common/nav' %>
+  <%= link_to "My advertised rooms", my_rooms_path %>
   <%= yield %>
 </body>
 </html>

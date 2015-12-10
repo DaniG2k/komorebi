@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<%= content_tag :h1, 'My Rooms' %>
+
+<% if @rooms.present? %>
+  <table>
+    <thead>
+      <tr>
+        <th><%= t :price, scope: :rooms %></th>
+        <th><%= t :deposit, scope: :rooms %></th>
+        <th><%= t :internet, scope: :rooms %></th>
+        <th><%= t :furnished, scope: :rooms %></th>
+        <th><%= t :smoking, scope: :rooms %></th>
+        <th><%= t :gender, scope: :rooms %></th>
+        <th><%= t :closest_station, scope: :rooms %></th>
+        <th><%= t :zone, scope: :rooms %></th>
+        <th><%= t :description, scope: :rooms %></th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @rooms.each do |room| %>
+        <tr>
+          <td><%= room.price %></td>
+          <td><%= room.deposit %></td>
+          <td><%= room.internet %></td>
+          <td><%= room.furnished %></td>
+          <td><%= room.smoking %></td>
+          <td><%= room.gender %></td>
+          <td><%= room.closest_station %></td>
+          <td><%= room.zone %></td>
+          <td><%= room.description %></td>
+          <td><%= link_to 'Show', room %></td>
+          <td><%= link_to 'Edit', edit_room_path(room) %></td>
+          <td><%= link_to 'Destroy', room, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  Seems you don't have any room adverts!
+<% end %>
+
+<br>
+
+<%= link_to t(:new_room, scope: :rooms), new_room_path %>
