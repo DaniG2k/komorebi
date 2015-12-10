@@ -1,15 +1,21 @@
 Rails.application.routes.draw do
   get '' => redirect("/#{I18n.default_locale}")
   scope "/:locale", locale: /en|ja|ko/ do # Can also do: /#{I18n.available_locales.join("|")}/ do
-    devise_for :users
     root 'rooms#index'
+    devise_for :users
     resources :rooms
     get 'my_rooms', to: 'rooms#my_rooms'
 
     # mailbox folder routes
-    %w(inbox sent trash).each do |location|
-      get "mailbox/#{location}" => "mailbox#{location}", as: "mailbox_#{location}".to_sym
+    %w(inbox sent trash).each do |mb|
+      get "mailbox/#{mb}" => "mailbox#{mb}", as: "mailbox_#{mb}".to_sym
     end
+
+    resources :conversations do
+      member do
+        %w(reply trash untrash).each {|convo| post convo.to_sym}          
+      end
+    end 
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

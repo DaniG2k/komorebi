@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :set_locale
-  helper_method :mailbox
+  helper_method :mailbox, :conversation
 
   def set_locale
   	I18n.locale = params[:locale] || I18n.default_locale
@@ -22,5 +22,9 @@ class ApplicationController < ActionController::Base
     def configure_permitted_parameters
       devise_parameter_sanitizer.for(:sign_up) << :name
       devise_parameter_sanitizer.for(:account_update) << :name
+    end
+
+    def conversation
+      @conversation ||= mailbox.conversations.find(params[:id])
     end
 end
