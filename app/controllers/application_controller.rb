@@ -7,12 +7,12 @@ class ApplicationController < ActionController::Base
   helper_method :mailbox, :conversation
 
   def set_locale
-  	I18n.locale = params[:locale] || I18n.default_locale
-	end
+    I18n.locale = params[:locale] || I18n.default_locale
+  end
 
-	def default_url_options(options = {})
-		{ locale: I18n.locale }.merge options
-	end
+  def default_url_options(options = {})
+    { locale: I18n.locale }.merge options
+  end
 
   private
     def mailbox
