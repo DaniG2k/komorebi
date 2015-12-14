@@ -1,2 +1,8 @@
 ko:
   website: "코모래비"
+  devise:
+    registrations:
+      new:
+        name: "이름"
+      edit:
+        name: "이름"

@@ -1,2 +1,8 @@
 ja:
   website: "コモレビ"
+  devise:
+    registrations:
+      new:
+        name: "氏名"
+      edit:
+        name: "氏名"

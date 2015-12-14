@@ -21,3 +21,9 @@
 
 en:
   website: "Komorebi"
+  devise:
+    registrations:
+      new:
+        name: "Name"
+      edit:
+        name: "Name"
