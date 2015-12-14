@@ -26,6 +26,7 @@ gem 'devise'
 gem 'devise-i18n'
 # For user to user messaging:
 gem 'mailboxer'
+gem 'chosen-rails'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
