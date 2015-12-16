@@ -1,0 +1,11 @@
+zh-CN:
+  rooms:
+    price: "价格"
+    deposit: "押金"
+    internet: "网络"
+    furnished: "装修"
+    smoking: "吸烟"
+    gender: "性别"
+    closest_station: "最近地铁站"
+    zone: "地铁区"
+    description: "描述"

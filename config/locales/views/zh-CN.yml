@@ -1,0 +1,5 @@
+zh-CN:
+  rooms:
+    new_room: 添加房间
+    listing_rooms: 房间列表
+    cannot_modify: "对不起，您不能更改房间列表。"
