@@ -47,6 +47,13 @@ a {
   }
 }
 
+h1,h2,h3,h4,h5,h6 {
+  font-family:$hero-font-family;
+  -webkit-font-smoothing:antialiased;
+  -moz-font-smoothing:antialiased;
+  font-smoothing:antialiased;
+}
+
 * {
   -webkit-box-sizing:border-box;
   -moz-box-sizing:border-box;

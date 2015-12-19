@@ -1,7 +1,8 @@
 en:
   rooms:
-    new_room: New room
-    listing_rooms: Room listing
+    new_room: 'New room'
+    listing_rooms: 'Room listing'
     cannot_modify: "Sorry, you cannot modify this room listing."
+    edit_room: 'Edit room'
   mailbox:
     inbox: Inbox

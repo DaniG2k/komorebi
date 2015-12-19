@@ -3,5 +3,6 @@ ko:
     new_room: "새로운 방"
     listing_rooms: "방 목록"
     cannot_modify: "죄송하지만이 방을 변경할 수 없습니다."
+    edit_room: "방 편집"
   mailbox:
     inbox: "받은 편지함"

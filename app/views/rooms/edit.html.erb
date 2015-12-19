@@ -1,6 +1,13 @@
-<h1>Editing Room</h1>
+<% title t(:edit_room, scope: :rooms) %>
 
-<%= render 'form' %>
+<div class="row">
+  <div class="span4"></div>
+  <div class="span4">
+    <%= content_tag :h2, t(:edit_room, scope: :rooms) %>
+    <br>
+    <%= render 'form' %>
+  </div>
+  <div class="span4"></div>
+</div>
 
-<%= link_to 'Show', @room %> |
-<%= link_to 'Back', rooms_path %>
+<%= link_to 'Show', @room %> | <%= link_to 'Back', rooms_path %>

@@ -1,11 +1,13 @@
 <% title t(:new_room, scope: :rooms) %>
 
 <div class="row">
-	<div class="span4"></div>
-	<div class="span4">
-		<%= render 'form' %>
-	</div>
-	<div class="span4"></div>
+  <div class="span4"></div>
+  <div class="span4">
+    <%= content_tag :h2, t(:new_room, scope: :rooms) %>
+    <br>
+    <%= render 'form' %>
+  </div>
+  <div class="span4"></div>
 </div>
 
 <%= link_to 'Back', rooms_path %>

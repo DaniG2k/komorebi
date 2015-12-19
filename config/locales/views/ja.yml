@@ -3,5 +3,6 @@ ja:
     new_room: "新たな部屋"
     listing_rooms: "部屋一覧"
     cannot_modify: "申し訳ありませんが、この部屋を変更することはできません。"
+    edit_room: "部屋編集"
   mailbox:
     inbox: "受信トレイ"
