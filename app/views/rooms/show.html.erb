@@ -1,47 +1,49 @@
 <p id="notice"><%= notice %></p>
 
+<p>Date posted: <%= time_ago_in_words @room.created_at %></p>
+
 <p>
-  <strong>Price:</strong>
+  <strong><%= t :price, scope: :rooms %></strong>
   <%= @room.price %>
 </p>
 
 <p>
-  <strong>Deposit:</strong>
+  <strong><%= t :deposit, scope: :rooms %></strong>
   <%= @room.deposit %>
 </p>
 
 <p>
-  <strong>Internet:</strong>
+  <strong><%= t :internet, scope: :rooms %></strong>
   <%= @room.internet %>
 </p>
 
 <p>
-  <strong>Furnished:</strong>
+  <strong><%= t :furnished, scope: :rooms %></strong>
   <%= @room.furnished %>
 </p>
 
 <p>
-  <strong>Smoking:</strong>
+  <strong><%= t :smoking, scope: :rooms %></strong>
   <%= @room.smoking %>
 </p>
 
 <p>
-  <strong>Gender:</strong>
+  <strong><%= t :gender, scope: :rooms %></strong>
   <%= @room.gender %>
 </p>
 
 <p>
-  <strong>Closest station:</strong>
+  <strong><%= t :closest_station, scope: :rooms %></strong>
   <%= @room.closest_station %>
 </p>
 
 <p>
-  <strong>Zone:</strong>
+  <strong><%= t :zone, scope: :rooms %></strong>
   <%= @room.zone %>
 </p>
 
 <p>
-  <strong>Description:</strong>
+  <strong><%= t :description, scope: :rooms %></strong>
   <%= @room.description %>
 </p>
 

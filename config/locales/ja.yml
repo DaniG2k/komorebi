@@ -1,5 +1,6 @@
 ja:
   website: "コモレビ"
+  hero_slogan: "ロンドンで部屋を見つけましょう"
   devise:
     registrations:
       new:

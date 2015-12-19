@@ -1,0 +1,25 @@
+.container {
+  padding:0;
+  width:95%;
+  max-width:1353px;
+  margin:0 auto;
+}
+
+.row {
+  margin:0 -10px;
+  overflow: hidden;
+}
+
+[class^="span"] { padding:10px; float:left; }
+.span1 { width:8.333%; }
+.span2 { width:16.666%; }
+.span3 { width:25%; }
+.span4 { width:33.333%; }
+.span5 { width:41.666%; }
+.span6 { width:50%; }
+.span7 { width:58.333%; }
+.span8 { width:66.666%; }
+.span9 { width:75%; }
+.span10 { width:82.333%; }
+.span11 { width:91.666%; }
+.span12 { width:100%; }

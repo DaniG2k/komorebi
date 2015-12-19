@@ -1,0 +1,25 @@
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="span2"></div>
+      <div class="span2"></div>
+      <div class="span2"></div>
+      <div class="span2"></div>
+      <% if user_signed_in? %>
+        <div class="span2">
+          <%= link_to fa_icon('inbox', text: "Inbox"), mailbox_inbox_path %>
+        </div>
+        <div class="span2"><%= link_to fa_icon('sign-out', text: "Sign out"), destroy_user_session_path, :method => :delete %></div>
+      <% else %>
+        <div class="span2"><%= link_to fa_icon('user-plus', text: "Sign up"), new_user_registration_path %></div>
+        <div class="span2"><%= link_to fa_icon('sign-in', text: "Sign in"), new_user_session_path %></div>
+      <% end %> 
+    </div>
+    <div class="span4"></div>
+    <div class="span4 center">
+      <%= content_tag :h1, t(:website) %>
+      <%= content_tag :h3, fa_icon('hand-peace-o', text: t(:hero_slogan), right: true) %>
+    </div>
+    <div class="span4"></div>
+  </div>
+</header>

@@ -21,6 +21,7 @@
 
 en:
   website: "Komorebi"
+  hero_slogan: 'Find a flat in London'
   devise:
     registrations:
       new:
