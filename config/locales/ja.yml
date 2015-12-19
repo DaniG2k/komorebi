@@ -7,3 +7,5 @@ ja:
         name: "氏名"
       edit:
         name: "氏名"
+    sessions:
+      destroy: "ログアウト"

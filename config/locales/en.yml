@@ -28,3 +28,5 @@ en:
         name: "Name"
       edit:
         name: "Name"
+    sessions:
+        destroy: "Sign out"

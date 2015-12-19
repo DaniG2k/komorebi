@@ -28,6 +28,12 @@ header {
   }
 }
 
+footer {
+  background:none repeat scroll 0 0 $footer-bg-color;
+  padding:1.25rem;
+  overflow: hidden;
+}
+
 body {
   background-color: #f5f5f5;
   font-family:$body-font-family;

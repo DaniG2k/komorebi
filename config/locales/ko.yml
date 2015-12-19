@@ -7,3 +7,5 @@ ko:
         name: "이름"
       edit:
         name: "이름"
+    sessions:
+      destroy: "로그 아웃"

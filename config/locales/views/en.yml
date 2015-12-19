@@ -3,3 +3,5 @@ en:
     new_room: New room
     listing_rooms: Room listing
     cannot_modify: "Sorry, you cannot modify this room listing."
+  mailbox:
+    inbox: Inbox

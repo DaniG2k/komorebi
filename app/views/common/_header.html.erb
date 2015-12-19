@@ -7,17 +7,17 @@
       <div class="span2"></div>
       <% if user_signed_in? %>
         <div class="span2">
-          <%= link_to fa_icon('inbox', text: "Inbox"), mailbox_inbox_path %>
+          <%= link_to fa_icon('inbox', text: "#{t(:inbox, scope: :mailbox)} (#{unread_messages_count})"), mailbox_inbox_path %>
         </div>
-        <div class="span2"><%= link_to fa_icon('sign-out', text: "Sign out"), destroy_user_session_path, :method => :delete %></div>
+        <div class="span2"><%= link_to fa_icon('sign-out', text: t(:destroy, scope: [:devise, :sessions])), destroy_user_session_path, :method => :delete %></div>
       <% else %>
-        <div class="span2"><%= link_to fa_icon('user-plus', text: "Sign up"), new_user_registration_path %></div>
-        <div class="span2"><%= link_to fa_icon('sign-in', text: "Sign in"), new_user_session_path %></div>
+        <div class="span2"><%= link_to(fa_icon('user-plus', text: t(:sign_up, scope: [:devise, :registrations, :new])), new_user_registration_path) %></div>
+        <div class="span2"><%= link_to(fa_icon('sign-in', text: t(:sign_in, scope: [:devise, :sessions, :new])), new_user_session_path) %></div>
       <% end %> 
     </div>
     <div class="span4"></div>
     <div class="span4 center">
-      <%= content_tag :h1, t(:website) %>
+      <%= content_tag :h1, link_to(t(:website), root_path) %>
       <%= content_tag :h3, fa_icon('hand-peace-o', text: t(:hero_slogan), right: true) %>
     </div>
     <div class="span4"></div>
