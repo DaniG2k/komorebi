@@ -1,0 +1,19 @@
+.form-control {
+	width:100%;
+	display:block;
+	font-size:15px;
+  border: 2px solid #bdc3c7;
+  border-radius: 6px;
+  box-shadow: none;
+  color:#34495e;
+  height:42px;
+  line-height:1.467;
+  padding: 8px 12px;
+  resize:vertical;
+  //&:focus {
+  //	border-color:;
+  //}
+}
+.form-group {
+	margin-bottom:15px;
+}

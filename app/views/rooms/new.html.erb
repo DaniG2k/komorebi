@@ -1,5 +1,11 @@
 <% title t(:new_room, scope: :rooms) %>
 
-<%= render 'form' %>
+<div class="row">
+	<div class="span4"></div>
+	<div class="span4">
+		<%= render 'form' %>
+	</div>
+	<div class="span4"></div>
+</div>
 
 <%= link_to 'Back', rooms_path %>

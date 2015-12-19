@@ -11,41 +11,38 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label(t(:price, scope: :rooms)) %><br>
-    <%= f.text_field :price %>
+  <div class="form-group">
+    <%= f.text_field :price, :placeholder => t(:price, scope: :rooms), :class => "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label(t(:deposit, scope: :rooms)) %><br>
-    <%= f.text_field :deposit %>
+  <div class="form-group">
+    <%= f.text_field :deposit, :placeholder => t(:deposit, scope: :rooms), :class => "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label(t(:internet, scope: :rooms)) %><br>
     <%= f.check_box :internet %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label(t(:furnished, scope: :rooms)) %><br>
     <%= f.check_box :furnished %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label(t(:smoking, scope: :rooms)) %><br>
     <%= f.check_box :smoking %>
   </div>
-  <div class="field">
-    <%= f.label(t(:gender, scope: :rooms)) %><br>
-    <%= f.text_field :gender %>
+  <div class="form-group">
+    <%= f.text_field :gender, :placeholder => t(:gender, scope: :rooms), :class => "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label(t(:closest_station, scope: :rooms)) %><br>
     <%= f.select(:closest_station, options_for_select(station_names.each_with_index.map {|s,i| [s,i]}, 0), {}, {class: 'chosen-select'}) %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label(t(:zone, scope: :rooms)) %><br>
     <%= f.number_field :zone %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label(t(:description, scope: :rooms)) %><br>
-    <%= f.text_area :description %>
+    <%= f.text_area :description, :class => 'form-control' %>
   </div>
   <div class="actions">
     <%= f.submit %>
