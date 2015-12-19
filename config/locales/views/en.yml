@@ -4,5 +4,6 @@ en:
     listing_rooms: 'Room listing'
     cannot_modify: "Sorry, you cannot modify this room listing."
     edit_room: 'Edit room'
+    ago: " ago"
   mailbox:
     inbox: Inbox
