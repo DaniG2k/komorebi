@@ -2,6 +2,7 @@
 <html lang="<%= set_html_lang %>">
 <head>
   <meta charset="utf-8">
+  <meta name="description" content="<%= t(:hero_slogan) %>">
   <%= content_tag :title, (content_for?(:title) ? yield(:title) : t(:website)) %>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
