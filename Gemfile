@@ -32,7 +32,8 @@ gem 'devise-i18n-views'
 # For user to user messaging:
 gem 'mailboxer'
 gem 'chosen-rails'
-gem "font-awesome-rails"
+gem 'font-awesome-rails'
+gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

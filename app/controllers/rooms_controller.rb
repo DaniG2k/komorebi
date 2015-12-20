@@ -78,7 +78,7 @@ class RoomsController < ApplicationController
       params.require(:room).permit(
         :price, :deposit, :internet, :furnished,
         :smoking, :gender, :closest_station, :zone,
-        :description)
+        :description, {room_images: []}, :remove_room_images)
     end
 
     def authorize

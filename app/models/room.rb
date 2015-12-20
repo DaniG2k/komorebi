@@ -1,6 +1,6 @@
 class Room < ActiveRecord::Base
 	belongs_to :user
-	
+	mount_uploaders :room_images, RoomImagesUploader
 	validates_presence_of :price, :user_id
   # There are 640 station names. Check station_names method in the rooms helper.
 	#validates :closest_station, inclusion: { in: (0..639) }

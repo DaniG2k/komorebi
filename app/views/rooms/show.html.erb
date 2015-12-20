@@ -47,5 +47,15 @@
   <%= @room.description %>
 </p>
 
+<p>
+  <% if @room.room_images? %>
+  <strong>Room images preview:</strong><br>
+    <% @room.room_images.each do |attachment| %>
+      <%= image_tag attachment.url, :class => 'img-thumbnail' %><br>
+      <%= content_tag(:small, content_tag(:b, "Path: #{attachment.url}")) %>
+    <% end %>
+  <% end %>
+</p>
+
 <%= link_to 'Edit', edit_room_path(@room) %> |
 <%= link_to 'Back', rooms_path %>
