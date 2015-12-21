@@ -44,6 +44,19 @@ a {
   }
 }
 
+hr {
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  border-color: $gray-shade -moz-use-text-color -moz-use-text-color;
+  border-image: none;
+  border-style: solid none none;
+  border-width: 1px 0 0;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
 h1,h2,h3,h4,h5,h6 {
   font-family:$hero-font-family;
   -webkit-font-smoothing:antialiased;
