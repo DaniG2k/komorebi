@@ -13,6 +13,7 @@
   resize:vertical;
   &:focus {
   	border-color:$blue-shade;
+    outline:none;
   }
 }
 .form-group {
