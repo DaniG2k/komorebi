@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Room images</th>
       <th><%= t :price, scope: :rooms %></th>
       <th><%= t :deposit, scope: :rooms %></th>
       <th><%= t :internet, scope: :rooms %></th>
@@ -22,6 +23,11 @@
   <tbody>
     <% @rooms.each do |room| %>
       <tr>
+        <td>
+          <% if room.room_images? %>
+            <%= image_tag room.room_images.first.url, :class => 'img-thumbnail' %>
+          <% end %>
+        </td>
         <td><%= room.price %></td>
         <td><%= room.deposit %></td>
         <td><%= room.internet %></td>
