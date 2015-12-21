@@ -1,5 +1,10 @@
-<h2><%= t('.sign_in', :default => "Sign in") %></h2>
-
+<div class="row">
+  <div class="span4"></div>
+  <div class="span4 center">
+    <%= content_tag :h2, t('.sign_in', :default => "Sign in") %>
+  </div>
+  <div class="span4"></div>
+</div>
 <div class="row">
   <div class="span4"></div>
   <div class="span4">
@@ -20,8 +25,7 @@
 
       <div><%= f.submit t('.sign_in', :default => "Sign in") %></div>
     <% end %>
+    <%= render "devise/shared/links" %>
   </div>
   <div class="span4"></div>
 </div>
-
-<%= render "devise/shared/links" %>
