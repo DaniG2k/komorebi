@@ -15,7 +15,8 @@ header {
   min-height:25em;
   background-image: image-url("London.jpg");
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
+  background-position: center;
   color: $hero-font-color;
   font-family: $hero-font-family;
   h1 {
