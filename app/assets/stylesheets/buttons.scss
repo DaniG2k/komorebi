@@ -3,9 +3,6 @@
 $black_40: rgba(0, 0, 0, 0.4);
 $black_30: rgba(0, 0, 0, 0.3);
 
-$color_carnation_approx: #f06060;
-$color_monza_approx: #cd1313;
-$color_coral_red_approx: #ed4444;
 $color_brink_pink_approx: #ff6a80;
 $color_wild_watermelon_approx: #ff566f;
 
@@ -58,27 +55,27 @@ $color_wild_watermelon_approx: #ff566f;
     box-shadow: 0 1px 0 0 $blue-shade;
   }
 }
-.button-alert {
-  background-color: $color_brink_pink_approx;
-  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-  box-shadow: 0 3px 0 0 $color_monza_approx;
-  &:hover {
-    background-color: $color_wild_watermelon_approx;
-  }
-  &:active {
-    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-    box-shadow: 0 1px 0 0 $color_monza_approx;
-  }
+ .button-alert {
+   background-color: $yellow;
+   //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+   box-shadow: 0 3px 0 0 $yellow-shade;
+   &:hover {
+     background-color: $yellow-shade-2;
+   }
+   &:active {
+     //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+     box-shadow: 0 1px 0 0 $yellow-shade;
+   }
 }
 .button-danger {
-  background-color: $color_carnation_approx;
+  background-color: $red;
   //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-  box-shadow: 0 3px 0 0 $color_monza_approx;
+  box-shadow: 0 3px 0 0 $red-shade;
   &:hover {
-    background-color: $color_coral_red_approx;
+    background-color: $red-shade-2;
   }
   &:active {
     //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-    box-shadow: 0 1px 0 0 $color_monza_approx;
+    box-shadow: 0 1px 0 0 $red-shade;
   }
 }
