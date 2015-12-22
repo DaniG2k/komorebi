@@ -5,5 +5,7 @@ ja:
     cannot_modify: "申し訳ありませんが、この部屋を変更することはできません。"
     edit_room: "部屋編集"
     ago: "前"
+    index:
+      post_date: "掲載日"
   mailbox:
     inbox: "受信トレイ"
