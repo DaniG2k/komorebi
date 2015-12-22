@@ -11,9 +11,9 @@
 <body>
   <%= render 'common/header' %>
   <div class="container main">
-    <%= render 'common/language_select' %>
-    <%= link_to t(:listing_rooms, scope: :rooms), rooms_path %>
-    <%= link_to "My advertised rooms", my_rooms_path %>
+    <%= render 'common/language_select' %><br>
+    <%= link_to t(:title, scope: [:rooms, :index]), rooms_path %><br>
+    <%= link_to t(:title, scope: [:rooms, :my_rooms]), my_rooms_path %>
     <%= render 'common/alerts' %>
     <%= yield %>
   </div>

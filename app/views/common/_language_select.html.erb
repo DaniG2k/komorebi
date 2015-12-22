@@ -1,3 +1,4 @@
-<% {'en': 'English', 'zh-CN': '简体中文', 'ja': '日本語', 'ko': '한국어'}.each do |k, v| %>
+<% #{'en': 'English', 'zh-CN': '简体中文', 'ja': '日本語', 'ko': '한국어'}.each do |k, v| %>
+<% {'en': 'English', 'ja': '日本語', 'ko': '한국어'}.each do |k, v| %>
   <%= link_to(v, url_for(:locale => k)) %>
 <% end %>

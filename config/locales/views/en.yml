@@ -1,11 +1,13 @@
 en:
   rooms:
     new_room: 'New room'
-    listing_rooms: 'Room listing'
     cannot_modify: "Sorry, you cannot modify this room listing."
     edit_room: 'Edit room'
     ago: " ago"
     index:
+      title: 'Room listing'
       post_date: "Post date"
+    my_rooms:
+      title: "My advertised rooms"
   mailbox:
     inbox: Inbox

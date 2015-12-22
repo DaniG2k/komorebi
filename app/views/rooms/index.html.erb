@@ -1,6 +1,5 @@
-<p id="notice"><%= notice %></p>
-
-<%= content_tag :h1, t(:listing_rooms, scope: :rooms) %>
+<% title t('.title')%>
+<%= content_tag :h1, t('.title') %>
 
 <% if @rooms.size >= 3 %>
 <div class="row">

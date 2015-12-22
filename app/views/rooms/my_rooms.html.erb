@@ -1,6 +1,5 @@
-<p id="notice"><%= notice %></p>
-
-<%= content_tag :h1, 'My Rooms' %>
+<% title t('.title') %>
+<%= content_tag :h1, t('.title') %>
 
 <% if @rooms.present? %>
   <table>
