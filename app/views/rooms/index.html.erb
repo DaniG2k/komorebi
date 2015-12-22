@@ -6,7 +6,9 @@
 <div class="row">
   <% (0..2).each do |i| %>
   <div class="span4">
-    <%= image_tag @rooms[i].room_images.first.url(:thumb) %>
+    <figure class="tint">
+      <%= image_tag @rooms[i].room_images.first.url(:thumb), :alt => "Room near #{@rooms[i].closest_station}" %>
+    </figure>
   </div>
   <% end %>
 </div>
