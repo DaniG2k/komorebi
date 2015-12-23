@@ -7,6 +7,8 @@ ja:
     index:
       title: "部屋一覧"
       post_date: "掲載日"
+    show:
+      post_date: "掲載日"
     my_rooms:
       title: "私が掲載した部屋"
   mailbox:

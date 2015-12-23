@@ -1,6 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<p>Date posted: <%= time_ago_in_words @room.created_at %> ago</p>
+<p>
+  <strong><%= t('.post_date') %></strong>
+  <%= time_ago_in_words_with_suffix(@room) %>
+</p>
 
 <p>
   <strong><%= t :price, scope: :rooms %></strong>
@@ -25,6 +28,11 @@
 <p>
   <strong><%= t :smoking, scope: :rooms %></strong>
   <%= @room.smoking %>
+</p>
+
+<p>
+  <strong><%= t :couples_ok, scope: :rooms %></strong>
+  <%= @room.couples_ok %>
 </p>
 
 <p>

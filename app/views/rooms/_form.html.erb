@@ -29,6 +29,10 @@
     <%= f.label(t(:smoking, scope: :rooms)) %><br>
     <%= f.check_box :smoking %>
   </div>
+   <div class="form-group">
+    <%= f.label(t(:couples_ok, scope: :rooms)) %><br>
+    <%= f.check_box :couples_ok %>
+  </div>
   <div class="form-group">
     <%= f.text_field :gender, :placeholder => t(:gender, scope: :rooms), :class => "form-control" %>
   </div>

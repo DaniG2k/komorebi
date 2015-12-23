@@ -5,9 +5,11 @@
 <div class="row">
   <% (0..2).each do |i| %>
   <div class="span4">
-    <figure class="tint">
-      <%= image_tag @rooms[i].room_images.first.url(:thumb), :alt => "Room near #{@rooms[i].closest_station}" %>
-    </figure>
+    <%= link_to room_path(@rooms[i]) do %>
+      <figure class="tint">
+       <%= image_tag @rooms[i].room_images.first.url(:thumb), :alt => "Room near zone #{@rooms[i].zone}" %>
+      </figure>
+    <% end %>
   </div>
   <% end %>
 </div>
