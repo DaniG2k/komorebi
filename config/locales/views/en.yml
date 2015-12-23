@@ -1,6 +1,6 @@
 en:
   rooms:
-    new_room: 'New room'
+    new_room: 'Post a new room'
     cannot_modify: "Sorry, you cannot modify this room listing."
     edit_room: 'Edit room'
     ago: " ago"

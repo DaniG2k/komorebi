@@ -11,11 +11,20 @@
 <body>
   <%= render 'common/header' %>
   <div class="container main">
-    <%= render 'common/language_select' %><br>
-    <%= link_to t(:title, scope: [:rooms, :index]), rooms_path %><br>
-    <%= link_to t(:title, scope: [:rooms, :my_rooms]), my_rooms_path %>
-    <%= render 'common/alerts' %>
-    <%= yield %>
+    <div class="row">
+      <div class="span2">
+        <%= render 'common/language_select' %><br>
+        <%= link_to t(:title, scope: [:rooms, :index]), rooms_path %><br>
+        <%= link_to t(:title, scope: [:rooms, :my_rooms]), my_rooms_path %>
+      </div>
+      <div class="span10"></div>
+    </div>
+    <div class="row">
+      <div class="span12">
+        <%= render 'common/alerts' %>
+        <%= yield %>
+      </div>
+    </div>
   </div>
   <%= render 'common/footer' %>
 </body>

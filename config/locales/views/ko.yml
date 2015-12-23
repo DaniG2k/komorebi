@@ -1,6 +1,6 @@
 ko:
   rooms:
-    new_room: "새로운 방"
+    new_room: "새로운 방 등록"
     cannot_modify: "죄송하지만이 방을 변경할 수 없습니다."
     edit_room: "방 편집"
     ago: " 전에"

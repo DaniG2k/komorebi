@@ -1,6 +1,6 @@
 ja:
   rooms:
-    new_room: "新たな部屋"
+    new_room: "新たな部屋を登録"
     cannot_modify: "申し訳ありませんが、この部屋を変更することはできません。"
     edit_room: "部屋編集"
     ago: "前"
