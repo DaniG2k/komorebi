@@ -60,7 +60,6 @@
   <strong>Room images preview:</strong><br>
     <% @room.room_images.each do |attachment| %>
       <%= image_tag attachment.url, :class => 'img-thumbnail' %><br>
-      <%= content_tag(:small, content_tag(:b, "Path: #{attachment.url}")) %>
     <% end %>
   <% end %>
 </p>
