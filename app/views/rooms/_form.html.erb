@@ -38,7 +38,7 @@
   </div>
   <div class="form-group">
     <%= f.label(t(:closest_station, scope: :rooms)) %><br>
-    <%= f.select(:closest_station, options_for_select(station_names.each_with_index.map {|s,i| [s,i]}, 0), {}, {class: 'chosen-select'}) %>
+    <%= f.select(:closest_station, options_for_select(station_names.map {|s| [s,s]}, 0), {}, {class: 'chosen-select'}) %>
   </div>
   <div class="form-group">
     <%= f.label(t(:zone, scope: :rooms)) %><br>

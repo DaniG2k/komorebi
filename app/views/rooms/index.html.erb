@@ -1,5 +1,7 @@
 <% title t('.title')%>
-<%= content_tag :h1, t('.title') %>
+<h1><%= t('.title') %></h1>
+
+<%= link_to t(:new_room, scope: :rooms), new_room_path %>
 
 <% if @rooms.size >= 3 %>
 <div class="row">
@@ -8,6 +10,7 @@
     <%= link_to room_path(@rooms[i]) do %>
       <figure class="tint">
        <%= image_tag @rooms[i].room_images.first.url(:thumb), :alt => "Room near zone #{@rooms[i].zone}" %>
+       <h2><span><%= @rooms[i].closest_station %> £<%= @rooms[i].price %></span></h2>
       </figure>
     <% end %>
   </div>
@@ -17,21 +20,31 @@
 
 <% if @rooms.size >= 5 %>
 <div class="row">
-  <% (3..4).each do |i| %>
-  <div class="span4">
-    <%= image_tag @rooms[i].room_images.first.url(:thumb) %>
+  <div class="span8">
+    <%= link_to room_path(@rooms[3]) do %>
+      <figure class="tint"><%= image_tag @rooms[3].room_images.first.url %></figure>
+    <% end %>
   </div>
-  <% end %>
+  <div class="span4">
+    <%= link_to room_path(@rooms[4]) do %>
+      <figure class="tint"><%= image_tag @rooms[4].room_images.first.url :thumb %></figure>
+    <% end %>
+  </div>
 </div>
 <% end %>
 
 <% if @rooms.size >= 7 %>
 <div class="row">
-  <% (5..6).each do |i| %>
   <div class="span4">
-    <%= image_tag @rooms[i].room_images.first.url(:thumb) %>
+    <%= link_to room_path(@rooms[5]) do %>
+    <figure class="tint"><%= image_tag @rooms[5].room_images.first.url :thumb %></figure>
+    <% end %>
   </div>
-  <% end %>
+  <div class="span8">
+    <%= link_to room_path(@rooms[5]) do %>
+      <figure class="tint"><%= image_tag @rooms[6].room_images.first.url %></figure>
+    <% end %>
+  </div>
 </div>
 <% end %>
 
@@ -44,51 +57,3 @@
   <% end %>
 </div>
 <% end %>
-
-<table>
-  <thead>
-    <tr>
-      <th>Room images</th>
-      <th><%= t :price, scope: :rooms %></th>
-      <th><%= t :deposit, scope: :rooms %></th>
-      <th><%= t :internet, scope: :rooms %></th>
-      <th><%= t :furnished, scope: :rooms %></th>
-      <th><%= t :smoking, scope: :rooms %></th>
-      <th><%= t :gender, scope: :rooms %></th>
-      <th><%= t :closest_station, scope: :rooms %></th>
-      <th><%= t :zone, scope: :rooms %></th>
-      <th><%= t :description, scope: :rooms %></th>
-      <th><%= t('.post_date') %></th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @rooms.each do |room| %>
-      <tr>
-        <td>
-          <% if room.room_images? %>
-            <%= image_tag room.room_images.first.url(:thumb), :class => 'img-thumbnail' %>
-          <% end %>
-        </td>
-        <td><%= room.price %></td>
-        <td><%= room.deposit %></td>
-        <td><%= room.internet %></td>
-        <td><%= room.furnished %></td>
-        <td><%= room.smoking %></td>
-        <td><%= room.gender %></td>
-        <td><%= room.closest_station %></td>
-        <td><%= room.zone %></td>
-        <td><%= room.description %></td>
-        <td><%= time_ago_in_words_with_suffix(room) %></td>
-        <td><%= link_to 'Show', room %></td>
-        <td><%= link_to 'Edit', edit_room_path(room) %></td>
-        <td><%= link_to 'Destroy', room, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to t(:new_room, scope: :rooms), new_room_path %>
