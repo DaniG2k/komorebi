@@ -1,6 +1,6 @@
 ko:
   website: "코모래비"
-  hero_slogan: "런던에서 방을 찾아 냅시다"
+  hero_slogan: "런던에서 지낼 곳을 구해보세요"
   devise:
     registrations:
       new:
