@@ -1,69 +1,78 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong><%= t('.post_date') %></strong>
-  <%= time_ago_in_words_with_suffix(@room) %>
-</p>
+<div class="row">
+  <div class="span4"></div>
+  <div class="span4">
+    <p>
+      <strong><%= t('.post_date') %></strong>
+      <%= time_ago_in_words_with_suffix(@room) %>
+    </p>
 
-<p>
-  <strong><%= t :price, scope: :rooms %></strong>
-  <%= @room.price %>
-</p>
+    <p>
+      <strong><%= t :price, scope: :rooms %></strong>
+      <%= @room.price %>
+    </p>
 
-<p>
-  <strong><%= t :deposit, scope: :rooms %></strong>
-  <%= @room.deposit %>
-</p>
+    <p>
+      <strong><%= t :deposit, scope: :rooms %></strong>
+      <%= @room.deposit %>
+    </p>
 
-<p>
-  <strong><%= t :internet, scope: :rooms %></strong>
-  <%= @room.internet %>
-</p>
+    <p>
+      <strong><%= t :internet, scope: :rooms %></strong>
+      <%= @room.internet %>
+    </p>
 
-<p>
-  <strong><%= t :furnished, scope: :rooms %></strong>
-  <%= @room.furnished %>
-</p>
+    <p>
+      <strong><%= t :furnished, scope: :rooms %></strong>
+      <%= @room.furnished %>
+    </p>
 
-<p>
-  <strong><%= t :smoking, scope: :rooms %></strong>
-  <%= @room.smoking %>
-</p>
+    <p>
+      <strong><%= t :smoking, scope: :rooms %></strong>
+      <%= @room.smoking %>
+    </p>
 
-<p>
-  <strong><%= t :couples_ok, scope: :rooms %></strong>
-  <%= @room.couples_ok %>
-</p>
+    <p>
+      <strong><%= t :couples_ok, scope: :rooms %></strong>
+      <%= @room.couples_ok %>
+    </p>
 
-<p>
-  <strong><%= t :gender, scope: :rooms %></strong>
-  <%= @room.gender %>
-</p>
+    <p>
+      <strong><%= t :gender, scope: :rooms %></strong>
+      <%= @room.gender %>
+    </p>
 
-<p>
-  <strong><%= t :closest_station, scope: :rooms %></strong>
-  <%= @room.closest_station %>
-</p>
+    <p>
+      <strong><%= t :closest_station, scope: :rooms %></strong>
+      <%= @room.closest_station %>
+    </p>
 
-<p>
-  <strong><%= t :zone, scope: :rooms %></strong>
-  <%= @room.zone %>
-</p>
+    <p>
+      <strong><%= t :zone, scope: :rooms %></strong>
+      <%= @room.zone %>
+    </p>
 
-<p>
-  <strong><%= t :description, scope: :rooms %></strong>
-  <%= @room.description %>
-</p>
+    <p>
+      <strong><%= t :description, scope: :rooms %></strong>
+      <%= @room.description %>
+    </p>
+  </div>
+  <div class="span4"></div>
+</div>
+<div class="row">
+  <div class="span12">
+    <p>
+      <% if @room.room_images? %>
+      <strong>Room images preview:</strong><br>
+        <% @room.room_images.each do |attachment| %>
+          <%= image_tag attachment.url, :class => 'img-thumbnail' %><br>
+        <% end %>
+      <% end %>
+    </p>
+  </div>
+</div>
 
-<p>
-  <% if @room.room_images? %>
-  <strong>Room images preview:</strong><br>
-    <% @room.room_images.each do |attachment| %>
-      <%= image_tag attachment.url, :class => 'img-thumbnail' %><br>
-    <% end %>
-  <% end %>
-</p>
-
-<%= link_to 'Edit', edit_room_path(@room) %> |
-<%= link_to 'Destroy', @room, method: :delete, data: { confirm: 'Are you sure?' } %> |
-<%= link_to 'Back', rooms_path %>
+<%= link_to 'Edit', edit_room_path(@room), :class => "button button-default" %>
+<%= link_to 'Back', rooms_path, :class => "button button-alert" %>
+<%= link_to 'Destroy', @room, method: :delete, data: { confirm: 'Are you sure?' }, :class => "button button-danger" %>
