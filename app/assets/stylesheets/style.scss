@@ -26,8 +26,18 @@ header {
   }
 }
 
+.search {
+  @include full-width;
+  min-height:6em;
+  background:$dark-blue none repeat scroll 0 0;
+  h3 {
+    color:white;
+    text-transform:uppercase;
+  }
+}
+
 footer {
-  background:none repeat scroll 0 0 $footer-bg-color;
+  background:none repeat scroll 0 0 $dark-blue;
   padding:1.25rem;
   overflow: hidden;
 }
