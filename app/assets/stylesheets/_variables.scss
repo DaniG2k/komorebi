@@ -1,7 +1,9 @@
+$font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+
 $blue:#3fb8e8;
 $blue-shade:#3293ba;
 $blue-shade-2:#1baae3;
-$dark-blue:#474d5d;
+$dark-blue:#474D5D;
 
 $yellow:#fdc058;
 $yellow-shade:#e29003;
@@ -15,7 +17,8 @@ $gray:#EEEEEE;
 $gray-shade:#bdc3c7;
 
 $bg-color:$gray;
-$hero-font-family:Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+$hero-font-family:$font-family;
 $hero-font-color:#FFFFFF;
 
-$body-font-family:Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+$body-font-family:$font-family;
+$body-font-color:$dark-blue;
