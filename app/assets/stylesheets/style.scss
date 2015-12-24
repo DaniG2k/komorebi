@@ -29,6 +29,7 @@ header {
 .search {
   @include full-width;
   min-height:6em;
+  padding-bottom:13px;
   background:$dark-blue none repeat scroll 0 0;
   h3 {
     color:white;
