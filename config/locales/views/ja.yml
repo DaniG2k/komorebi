@@ -3,7 +3,7 @@ ja:
     search:
       search: "検索"
       search_tip: "駅名、あるいはポストコードから検索"
-      search_placeholder: "フラット検索"
+      search_placeholder: "フラット検索…"
   rooms:
     new_room: "新たな部屋を登録"
     cannot_modify: "申し訳ありませんが、この部屋を変更することはできません。"
@@ -14,6 +14,9 @@ ja:
       post_date: "掲載日"
     show:
       post_date: "掲載日"
+      edit: "編集"
+      back: "戻る"
+      destroy: "削除"
     my_rooms:
       title: "私が掲載した部屋"
   mailbox:

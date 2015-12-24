@@ -73,6 +73,6 @@
   </div>
 </div>
 
-<%= link_to 'Edit', edit_room_path(@room), :class => "button button-default" %>
-<%= link_to 'Back', rooms_path, :class => "button button-alert" %>
-<%= link_to 'Destroy', @room, method: :delete, data: { confirm: 'Are you sure?' }, :class => "button button-danger" %>
+<%= link_to t('.edit'), edit_room_path(@room), :class => "button button-default" %>
+<%= link_to t('.back'), rooms_path, :class => "button button-alert" %>
+<%= link_to t('.destroy'), @room, method: :delete, data: { confirm: 'Are you sure?' }, :class => "button button-danger" %>

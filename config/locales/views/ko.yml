@@ -3,7 +3,7 @@ ko:
     search:
       search: "검색"
       search_tip: "역명, 또는 포스트 코드 검색"
-      search_placeholder: "플랫 검색"
+      search_placeholder: "플랫 검색..."
   rooms:
     new_room: "새로운 방 등록"
     cannot_modify: "죄송하지만이 방을 변경할 수 없습니다."
@@ -14,6 +14,9 @@ ko:
       post_date: "등록일"
     show:
       post_date: "등록일"
+      edit: "편집"
+      back: "뒤로"
+      destroy: "삭제"
     my_rooms:
       title: "내가 등록한 방"
   mailbox:
