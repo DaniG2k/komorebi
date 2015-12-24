@@ -1,4 +1,9 @@
 en:
+  common:
+    search:
+      search: Search
+      search_tip: Search flats by station name or postcode
+      search_placeholder: "Search for flats..."
   rooms:
     new_room: 'Post a new room'
     cannot_modify: "Sorry, you cannot modify this room listing."

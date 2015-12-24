@@ -12,7 +12,7 @@
 
 header {
   @include full-width;
-  min-height:25em;
+  min-height:23em;
   background-image: image-url("London.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -33,6 +33,16 @@ header {
   h3 {
     color:white;
     text-transform:uppercase;
+    padding:15px;
+  }
+  .form-control {
+    background-color:#585f73;
+    color:#93959C;
+    width:70%;
+    display:inline;
+  }
+  .button {
+    margin-top:0px;
   }
 }
 

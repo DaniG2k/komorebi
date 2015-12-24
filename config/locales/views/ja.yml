@@ -1,4 +1,9 @@
 ja:
+  common:
+    search:
+      search: "検索"
+      search_tip: "駅名、あるいはポストコードから検索"
+      search_placeholder: "フラット検索"
   rooms:
     new_room: "新たな部屋を登録"
     cannot_modify: "申し訳ありませんが、この部屋を変更することはできません。"
