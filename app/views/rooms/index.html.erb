@@ -10,7 +10,7 @@
     <%= link_to room_path(@rooms[i]) do %>
       <figure class="tint">
        <%= image_tag @rooms[i].room_images.first.url(:thumb), :alt => "Room near zone #{@rooms[i].zone}" %>
-       <h2><span><%= @rooms[i].closest_station %> £<%= @rooms[i].price %></span></h2>
+       <h2><%= @rooms[i].closest_station %><br>£<%= @rooms[i].price %></h2>
       </figure>
     <% end %>
   </div>
