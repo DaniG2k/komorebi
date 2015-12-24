@@ -1,0 +1,23 @@
+@import 'variables';
+
+.lang-nav {
+  a {
+    &:hover {text-decoration:none;}
+  }
+  &:hover > .drop-lang {
+    display:block;
+  }
+}
+.drop-lang {
+  list-style-type:none;
+  position:absolute;
+  display:none;
+  background-color:white;
+  color:$body-font-color;
+  li {
+    padding:15px;
+    &:hover {
+      background-color:$gray;
+    }
+  }
+}

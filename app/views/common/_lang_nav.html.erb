@@ -1,0 +1,8 @@
+<div class="lang-nav">
+  <%= link_to(fa_icon('chevron-down', text: 'English', right: true), url_for(:locale => :en)) %>
+  <ul class="drop-lang">
+  <% {'ja': '日本語', 'ko': '한국어'}.each do |k, v| %>
+    <%= content_tag :li, link_to(v, url_for(:locale => k)) %>
+  <% end %>
+  </ul>
+</div>

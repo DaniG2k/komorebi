@@ -4,7 +4,6 @@
       <div class="span2"></div>
       <div class="span2"></div>
       <div class="span2"></div>
-      <div class="span2"></div>
       <% if user_signed_in? %>
         <div class="span2">
           <%= link_to fa_icon('inbox', text: "#{t(:inbox, scope: :mailbox)} (#{unread_messages_count})"), mailbox_inbox_path %>
@@ -13,7 +12,10 @@
       <% else %>
         <div class="span2"><%= link_to(fa_icon('user-plus', text: t(:sign_up, scope: [:devise, :registrations, :new])), new_user_registration_path) %></div>
         <div class="span2"><%= link_to(fa_icon('sign-in', text: t(:sign_in, scope: [:devise, :sessions, :new])), new_user_session_path) %></div>
-      <% end %> 
+      <% end %>
+      <div class="span2">
+        <%= render 'common/lang_nav' %>
+      </div>
     </div>
     <div class="span4"></div>
     <div class="span4 center">
