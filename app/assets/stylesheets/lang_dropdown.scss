@@ -9,13 +9,16 @@
   }
 }
 .drop-lang {
+  a {
+    display:inline-block;
+    padding:15px;
+  }
   list-style-type:none;
   position:absolute;
   display:none;
   background-color:white;
   color:$body-font-color;
   li {
-    padding:15px;
     &:hover {
       background-color:$gray;
     }

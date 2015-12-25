@@ -1,8 +1,10 @@
+<% langs = {:en => 'English', :ja => '日本語', :ko => '한국어'} %>
+<% current = langs.delete(I18n.locale) %>
 <div class="lang-nav">
-  <%= link_to(fa_icon('chevron-down', text: 'English', right: true), url_for(:locale => :en)) %>
+  <%= link_to(fa_icon('chevron-down', text: current, right: true), url_for(:locale => I18n.locale)) %>
   <ul class="drop-lang">
-  <% {'ja': '日本語', 'ko': '한국어'}.each do |k, v| %>
-    <%= content_tag :li, link_to(v, url_for(:locale => k)) %>
+  <% langs.each do |key, val| %>
+    <%= content_tag :li, link_to(val, url_for(:locale => key)) %>
   <% end %>
   </ul>
 </div>
