@@ -50,6 +50,9 @@ footer {
   background:none repeat scroll 0 0 $dark-blue;
   padding:1.25rem;
   overflow: hidden;
+  p {
+    color:white;
+  }
 }
 
 body {
