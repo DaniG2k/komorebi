@@ -8,14 +8,14 @@
       padding:$li-padding;
     }
     .active {
-      border-left:2px solid $red;  
+      border-left:3px solid $blue;
     }
     li {
       border-bottom:1px solid $gray;
-      border-left:2px solid $dark-blue;
+      border-left:3px solid $dark-blue;
       background-color:white;
       &:hover{
-        border-left:2px solid $blue;
+        border-left:3px solid $blue;
       }
     }
   }

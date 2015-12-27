@@ -21,6 +21,10 @@ ko:
       title: "내가 등록한 방"
   mailbox:
     inbox: "받은 편지함"
+    folders:
+      compose: "작성"
+      sent: "보낸 편지함"
+      trash: "휴지통"
   conversations:
     form:
       subject: "제목"

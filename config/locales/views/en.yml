@@ -21,6 +21,10 @@ en:
       title: "My advertised rooms"
   mailbox:
     inbox: Inbox
+    folders:
+      compose: Compose
+      sent: Sent
+      trash: Trash
   conversations:
     form:
       subject: "Subject"
