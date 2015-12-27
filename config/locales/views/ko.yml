@@ -22,7 +22,7 @@ ko:
   mailbox:
     inbox: "받은 편지함"
     folders:
-      compose: "작성"
+      compose: "편지쓰기"
       sent: "보낸 편지함"
       trash: "휴지통"
   conversations:
