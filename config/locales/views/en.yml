@@ -21,3 +21,8 @@ en:
       title: "My advertised rooms"
   mailbox:
     inbox: Inbox
+  conversations:
+    form:
+      subject: "Subject"
+      message: "Type your message here"
+      send: Send message

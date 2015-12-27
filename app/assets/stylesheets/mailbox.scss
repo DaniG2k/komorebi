@@ -1,0 +1,22 @@
+@import 'variables';
+
+.mailbox {
+  ul {
+    list-style-type:none;
+    a {
+      display:block;
+      padding:$li-padding;
+    }
+    .active {
+      border-left:2px solid $red;  
+    }
+    li {
+      border-bottom:1px solid $gray;
+      border-left:2px solid $dark-blue;
+      background-color:white;
+      &:hover{
+        border-left:2px solid $blue;
+      }
+    }
+  }
+}

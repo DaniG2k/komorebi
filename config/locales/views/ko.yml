@@ -21,3 +21,8 @@ ko:
       title: "내가 등록한 방"
   mailbox:
     inbox: "받은 편지함"
+  conversations:
+    form:
+      subject: "제목"
+      message: "여기에 메시지를 입력 해주십시오"
+      send: "전송"

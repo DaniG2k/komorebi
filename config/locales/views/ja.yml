@@ -21,3 +21,8 @@ ja:
       title: "私が掲載した部屋"
   mailbox:
     inbox: "受信トレイ"
+  conversations:
+    form:
+      subject: "件名"
+      message: "ここでメッセージを入力して下さい"
+      send: "送信"
