@@ -21,7 +21,7 @@ en:
       title: "My advertised rooms"
   mailbox:
     inbox: Inbox
-    folders:
+    mailbox_nav:
       compose: Compose
       sent: Sent
       trash: Trash

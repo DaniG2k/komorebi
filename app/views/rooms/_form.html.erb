@@ -18,34 +18,34 @@
     <%= f.text_field :deposit, :placeholder => t(:deposit, scope: :rooms), :class => "form-control" %>
   </div>
   <div class="form-group">
-    <%= f.label(t(:internet, scope: :rooms)) %><br>
+    <%= f.label :internet %><br>
     <%= f.check_box :internet %>
   </div>
   <div class="form-group">
-    <%= f.label(t(:furnished, scope: :rooms)) %><br>
+    <%= f.label :furnished  %><br>
     <%= f.check_box :furnished %>
   </div>
   <div class="form-group">
-    <%= f.label(t(:smoking, scope: :rooms)) %><br>
+    <%= f.label :smoking %><br>
     <%= f.check_box :smoking %>
   </div>
    <div class="form-group">
-    <%= f.label(t(:couples_ok, scope: :rooms)) %><br>
+    <%= f.label :couples_ok %><br>
     <%= f.check_box :couples_ok %>
   </div>
   <div class="form-group">
     <%= f.text_field :gender, :placeholder => t(:gender, scope: :rooms), :class => "form-control" %>
   </div>
   <div class="form-group">
-    <%= f.label(t(:closest_station, scope: :rooms)) %><br>
+    <%= f.label :closest_station %><br>
     <%= f.select(:closest_station, options_for_select(station_names.map {|s| [s,s]}, 0), {}, {class: 'chosen-select'}) %>
   </div>
   <div class="form-group">
-    <%= f.label(t(:zone, scope: :rooms)) %><br>
+    <%= f.label :zone %><br>
     <%= f.number_field :zone %>
   </div>
   <div class="form-group">
-    <%= f.label(t(:description, scope: :rooms)) %><br>
+    <%= f.label :description %><br>
     <%= f.text_area :description, rows: "6", :class => 'form-control' %>
   </div>
   <div class="form-group">

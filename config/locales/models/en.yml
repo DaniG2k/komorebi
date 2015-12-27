@@ -1,12 +1,16 @@
 en:
+  activerecord:
+    attributes:
+      room:
+        room_images: "Room images"
+        zone: "Zone"
+        internet: "Internet"
+        furnished: "Furnished"
+        smoking: "Smoking"
+        closest_station: "Closest station"
+        couples_ok: "Couples ok"
+        description: "Description"
   rooms:
     price: "Price"
     deposit: "Deposit"
-    internet: "Internet"
-    furnished: "Furnished"
-    smoking: "Smoking"
-    couples_ok: "Couples ok"
     gender: "Gender"
-    closest_station: "Closest station"
-    zone: "Zone"
-    description: "Description"

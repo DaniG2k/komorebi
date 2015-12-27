@@ -1,12 +1,16 @@
 ko:
+  activerecord:
+    attributes:
+      room:
+        room_images: "방 이미지"
+        zone: "존"
+        internet: "인터넷"
+        furnished: "가구"
+        smoking: "흡연"
+        closest_station: "가장 가까운 역"
+        couples_ok: "커플 가능"
+        description: "개요"
   rooms:
     price: "월세"
     deposit: "보증금"
-    internet: "인터넷"
-    furnished: "가구"
-    smoking: "흡연"
-    couples_ok: "커플 가능"
     gender: "성별"
-    closest_station: "가장 가까운 역"
-    zone: "존"
-    description: "개요"

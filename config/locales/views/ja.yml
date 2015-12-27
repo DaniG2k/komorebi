@@ -21,7 +21,7 @@ ja:
       title: "私が掲載した部屋"
   mailbox:
     inbox: "受信トレイ"
-    folders:
+    mailbox_nav:
       compose: "作成"
       sent: "送信済み"
       trash: "ゴミ箱"
