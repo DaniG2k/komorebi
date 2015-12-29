@@ -2,10 +2,10 @@
 <% loc = I18n.locale %>
 <% current = langs.delete(loc) %>
 <div class="lang-nav">
-  <%= link_to(image_tag('flags/'+loc.to_s+'@2x.png') + fa_icon('chevron-down', text: current, right: true), url_for(:locale => loc)) %>
+  <%= link_to(image_tag('flags/'+loc.to_s+'2x.png') + fa_icon('chevron-down', text: current, right: true), url_for(:locale => loc)) %>
   <ul class="drop-lang">
   <% langs.each do |key, val| %>
-    <%= content_tag :li, link_to(image_tag('flags/'+key.to_s+'@2x.png') + val, url_for(:locale => key)) %>
+  	<%= content_tag :li, link_to(image_tag('flags/'+key.to_s+'2x.png') + val, url_for(:locale => key)) %>
   <% end %>
   </ul>
 </div>
