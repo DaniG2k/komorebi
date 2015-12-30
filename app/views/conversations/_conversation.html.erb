@@ -1,45 +1,25 @@
-<div class="media">
-  <div class="media-left">
-    <a href="#">
-      <img class="media-object" src="http://placehold.it/64x64" alt="...">
-    </a>
+<a href="#">
+  <img class="media-object" src="http://placehold.it/64x64" alt="...">
+</a>
+
+<%= conversation.originator.name %> <br>
+<small><b>Subject: </b><%= conversation.subject %></small><br>
+<small><b>Date: </b><%= conversation.messages.last.created_at.strftime("%A, %b %d, %Y at %I:%M%p") %></small><br>
+<small><b>Message: </b></small><%= truncate conversation.messages.last.body, length: 145 %><br>
+<%= link_to "View", conversation_path(conversation)  %>
+
+Messages partial goes here --------
+
+<%= form_for :message, url: reply_conversation_path(conversation) do |f| %>
+  <div class="form-group">
+    <%= f.text_area :body, placeholder: "Reply Message", rows: 4, class: "form-control" %>
   </div>
-  <div class="media-body">
-    <h4 class="media-heading">
-      <%= conversation.originator.name %> <br>
-      <small><b>Subject: </b><%= conversation.subject %></small><br>
-      <small><b>Date: </b><%=  conversation.messages.last.created_at.strftime("%A, %b %d, %Y at %I:%M%p") %></small>
-    </h4>
-    <%= truncate conversation.messages.last.body, length: 145 %>
-    <%= link_to "View", conversation_path(conversation)  %>
-  </div>
-</div>
+  <%= f.submit "Reply", class: 'button button-default' %>
+<% end %>
 
-<div class="row">
-
-  <div class="col-md-8">
-    <div class="panel panel-default">
-      <div class="panel-body">
-        Messages partial goes here --------
-      </div>
-      <div class="panel-footer">
-        <!-- Reply Form -->
-        <%= form_for :message, url: reply_conversation_path(conversation) do |f| %>
-            <div class="form-group">
-              <%= f.text_area :body, placeholder: "Reply Message", rows: 4, class: "form-control" %>
-            </div>
-            <%= f.submit "Reply", class: 'button button-default' %>
-        <% end %>
-
-        <% if conversation.is_trashed?(current_user) %>
-        <%= link_to 'Untrash', untrash_conversation_path(conversation), class: 'button button-alert', method: :post %>
-    <% else %>
-        <%= link_to 'Move to trash', trash_conversation_path(conversation), class: 'button button-danger', method: :post,
+<% if conversation.is_trashed?(current_user) %>
+  <%= link_to 'Untrash', untrash_conversation_path(conversation), class: 'button button-alert', method: :post %>
+<% else %>
+  <%= link_to 'Move to trash', trash_conversation_path(conversation), class: 'button button-danger', method: :post,
                     data: {confirm: 'Are you sure?'} %>
-    <% end %>
-        <div class="clearfix"></div>
-      </div>
-    </div>
-  </div>
-
-</div>
+<% end %>

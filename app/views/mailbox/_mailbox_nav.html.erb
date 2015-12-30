@@ -1,6 +1,6 @@
 <nav class="mailbox">
   <ul>
-    <%= content_tag :li, link_to(fa_icon('pencil', text: t('.compose')), new_conversation_path) %>
+    <%= content_tag :li, link_to(fa_icon('pencil', text: t('.compose')), new_conversation_path), class: active_page(:compose) %>
     <%= content_tag :li, link_to(fa_icon('inbox', text: "#{t(:inbox, scope: :mailbox)} (#{unread_messages_count})"), mailbox_inbox_path), class: active_page(:inbox) %>
     <%= content_tag :li, link_to(fa_icon('paper-plane', text: t('.sent')), mailbox_sent_path), class: active_page(:sent) %>
     <%= content_tag :li, link_to(fa_icon('trash', text: t('.trash')), mailbox_trash_path), class: active_page(:trash) %>
