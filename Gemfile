@@ -58,3 +58,8 @@ group :development do
   gem 'spring'
 end
 
+group :test do
+  gem 'timecop'
+  gem 'capybara'
+  gem 'factory_girl_rails', '~> 4.5'
+end

@@ -7,6 +7,11 @@ module ApplicationHelper
     I18n.locale.to_s
   end
 
+  def copyright_date
+    year = Time.zone.now.year
+    year.to_i == 2016 ? "#{year}" : "2016-#{year}"
+  end
+
   def active_page(active_page)
     @active == active_page ? "active" : ""
   end
